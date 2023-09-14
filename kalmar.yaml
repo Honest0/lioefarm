@@ -1,0 +1,26 @@
+namespace: kalmar
+kalmar:
+  defines: runnable
+  metadata:
+    name: kalmar
+    description: A decentralized application for farming and staking
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    kalmar:
+      build: .
+  connections:
+    bsc-dataseed4.ninicoin.io:
+      target: radicle/org-node
+      service: node
+    bscscan.com:
+      target: blockchain-explorer/base
+      service: service
+    pancakeswap.finance:
+      target: radicle/seed
+      service: http
+  variables:
+    node-env:
+      env: NODE_ENV
+      type: string
+      description: Used to determine in what environment the application is running
+      value: development
