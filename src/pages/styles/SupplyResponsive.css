@@ -1,0 +1,42 @@
+@media only screen and (max-width: 600px) {
+  .supply {
+    padding: 0;
+  }
+
+  .supply__body {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .input-form {
+    margin-left: -50px !important;
+  }
+
+  .supply__input > input {
+    width: 200px;
+  }
+
+  .supply__btn {
+    margin-left: -100px;
+  }
+
+  .supply__stats {
+    padding-left: 0;
+  }
+
+  .supply__stat {
+    padding: 50px 0 30px;
+    flex-direction: column;
+    justify-content: center !important;
+  }
+
+  .div {
+    width: 200px !important;
+    margin-right: 0;
+  }
+
+  .circular-progress {
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+}

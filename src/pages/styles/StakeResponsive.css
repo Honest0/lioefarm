@@ -1,0 +1,53 @@
+@media only screen and (max-width: 600px) {
+  .stake {
+    padding: 0;
+  }
+
+  .stake__row {
+    width: 100%;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-bottom: 25px;
+  }
+
+  .stake__col-1,
+  .stake__col-2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .stake__card {
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .stake__header-text {
+    text-align: left;
+    display: flex;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+
+  .stake__select {
+    margin-top: 30px;
+  }
+
+  .stake__header-text > p {
+    margin-right: 0 !important;
+  }
+
+  .stake__input {
+    margin-right: 10px;
+    width: 50%;
+    display: block;
+  }
+
+  .stake__input > button {
+    margin: 0;
+    margin-top: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+  }
+}

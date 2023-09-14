@@ -1,0 +1,237 @@
+module.exports = {
+    CHAIN_ID_LIST: [
+        {
+            chainId: '0x38', 
+            chainName: 'BSC',
+            rpcUrls: ['https://bsc-dataseed4.ninicoin.io/'],
+            buyUrl: 'https://pancakeswap.finance/swap?inputCurrency=0x6a2e100bb4e6b9a12386483ef717ff388151c0c8',
+            blockExplorerUrls: ['https://bscscan.com'],
+            nativeCurrency:  {
+                name: 'BNB',
+                symbol: 'BNB',
+                decimals: 18
+                },
+        }
+    ],
+    TOKEN_DETAIL: {
+      address: '0x6a2e100bb4e6b9a12386483ef717ff388151c0c8',
+      symbol: "LioE",
+      decimals: 9,
+      image: 'https://ancient.cash/theme-assets/images/logo.png'
+    },
+    ERC20_ABI: [
+        {
+            "inputs": [
+                {
+                    "internalType":"address",
+                    "name":"account",
+                    "type":"address"
+                }
+            ],
+            "name":"balanceOf",
+            "outputs": [
+                {
+                    "internalType":"uint256",
+                    "name":"",
+                    "type":"uint256"
+                }
+            ],
+            "stateMutability":"view",
+            "type":"function"
+        },
+        {
+          "type":"function",
+          "stateMutability":"view",
+          "payable":false,
+          "outputs":[
+            {
+              "type":"uint256",
+              "name":"",
+              "internalType":"uint256"
+            }
+          ],
+          "name":"totalSupply",
+          "inputs":[],
+          "constant":true
+        },
+        {
+          "constant":true,
+          "inputs":[
+            {
+              "internalType":"address",
+              "name":"owner",
+              "type":"address"
+            },{
+              "internalType":"address",
+              "name":"spender",
+              "type":"address"
+            }
+          ],
+          "name":"allowance",
+          "outputs":[
+            {
+              "internalType":"uint256",
+              "name":"",
+              "type":"uint256"
+            }
+          ],
+          "payable":false,
+          "stateMutability":"view",
+          "type":"function"
+        },
+        {
+          "constant":false,
+          "inputs":[
+            {
+              "internalType":"address",
+              "name":"spender",
+              "type":"address"
+            },{
+              "internalType":"uint256",
+              "name":"amount",
+              "type":"uint256"
+            }
+          ],
+          "name":"approve",
+          "outputs":[
+            {
+              "internalType":"bool",
+              "name":"",
+              "type":"bool"
+            }
+          ],
+          "payable":false,
+          "stateMutability":"nonpayable",
+          "type":"function"
+        }
+    ],
+    ROUTER_ABI: [
+        {
+          "type":"function",
+          "stateMutability":"view",
+          "outputs":[
+            {
+              "type":"uint256[]",
+              "name":"amounts",
+              "internalType":"uint256[]"
+            }
+          ],
+          "name":"getAmountsOut",
+          "inputs":[
+            {
+              "type":"uint256",
+              "name":"amountIn",
+              "internalType":"uint256"
+            },{
+              "type":"address[]",
+              "name":"path",
+              "internalType":"address[]"
+            }
+          ]
+        }
+    ],
+    FARMING_ABI: [
+      {
+        "inputs":[
+          {
+            "internalType":"address",
+            "name":"_lioe",
+            "type":"address"
+          },
+          {
+            "internalType":"uint256",
+            "name":"_poolStartTime",
+            "type":"uint256"
+          }
+        ],
+        "stateMutability":"nonpayable",
+        "type":"constructor"
+      },
+      {
+        "anonymous":false,
+        "inputs":[
+          {
+            "indexed":true,
+            "internalType":"address",
+            "name":"user",
+            "type":"address"
+          },
+          {
+            "indexed":true,
+            "internalType":"uint256",
+            "name":"pid",
+            "type":"uint256"
+          },
+          {
+            "indexed":false,
+            "internalType":"uint256",
+            "name":"amount",
+            "type":"uint256"
+          }
+        ],
+        "name":"Deposit",
+        "type":"event"
+      },
+      {
+        "anonymous":false,
+        "inputs":[
+          {
+            "indexed":true,
+            "internalType":"address",
+            "name":"user",
+            "type":"address"
+          },
+          {
+            "indexed":true,
+            "internalType":"uint256",
+            "name":"pid",
+            "type":"uint256"
+          },
+          {
+            "indexed":false,
+            "internalType":"uint256",
+            "name":"amount",
+            "type":"uint256"
+          }
+        ],
+        "name":"EmergencyWithdraw",
+        "type":"event"
+      },
+      {
+        "anonymous":false,
+        "inputs":[
+          {
+            "indexed":true,
+            "internalType":"address",
+            "name":"user",
+            "type":"address"
+          },
+          {
+            "indexed":false,
+            "internalType":"uint256",
+            "name":"amount",
+            "type":"uint256"
+          }
+        ],
+        "name":"RewardPaid",
+        "type":"event"
+      },
+      {
+        "anonymous":false,
+        "inputs":[
+          {
+            "indexed":true,
+            "internalType":"address",
+            "name":"user",
+            "type":"address"
+          },
+          {
+            "indexed":true,
+            "internalType":"uint256",
+            "name":"pid",
+            "type":"uint256"
+          },
+          {
+            "indexed":false,
+            "internalType":"uint256","name":"amount","type":"uint256"}],"name":"Withdraw","type":"event"},{"inputs":[],"name":"TOTAL_REWARDS","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_allocPoint","type":"uint256"},{"internalType":"contract IERC20","name":"_token","type":"address"},{"internalType":"bool","name":"_withUpdate","type":"bool"},{"internalType":"uint256","name":"_lastRewardTime","type":"uint256"}],"name":"add","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pid","type":"uint256"},{"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"deposit","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pid","type":"uint256"}],"name":"emergencyWithdraw","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_fromTime","type":"uint256"},{"internalType":"uint256","name":"_toTime","type":"uint256"}],"name":"getGeneratedReward","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"contract IERC20","name":"_token","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"address","name":"to","type":"address"}],"name":"governanceRecoverUnsupported","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"lioe","outputs":[{"internalType":"contract IERC20","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"lioePerSecond","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"massUpdatePools","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"operator","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pid","type":"uint256"},{"internalType":"address","name":"_user","type":"address"}],"name":"pendingShare","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"poolEndTime","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"poolInfo","outputs":[{"internalType":"contract IERC20","name":"token","type":"address"},{"internalType":"uint256","name":"allocPoint","type":"uint256"},{"internalType":"uint256","name":"lastRewardTime","type":"uint256"},{"internalType":"uint256","name":"accLioePerShare","type":"uint256"},{"internalType":"bool","name":"isStarted","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"poolStartTime","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"runningTime","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pid","type":"uint256"},{"internalType":"uint256","name":"_allocPoint","type":"uint256"}],"name":"set","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"_operator","type":"address"}],"name":"setOperator","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"totalAllocPoint","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pid","type":"uint256"}],"name":"updatePool","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"},{"internalType":"address","name":"","type":"address"}],"name":"userInfo","outputs":[{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"uint256","name":"rewardDebt","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_pid","type":"uint256"},{"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"withdraw","outputs":[],"stateMutability":"nonpayable","type":"function"}]
+}

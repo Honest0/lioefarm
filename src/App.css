@@ -1,0 +1,27 @@
+.app {
+  background: rgb(243, 247, 248);
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app__body {
+  flex: 0.8;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.app__body--full {
+  flex: 1;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.padding__left {
+  padding-left: calc(16.6667%);
+}
+
+.padding__right {
+  padding-left: calc(16.6667%);
+}

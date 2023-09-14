@@ -1,0 +1,86 @@
+@media only screen and (max-width: 600px) {
+  .home {
+    padding: 0;
+  }
+
+  .home__row {
+    /* display: flex !important; */
+    width: 100%;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-bottom: 25px;
+  }
+
+  .home__col-1 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .home__col-2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .home__card {
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .home__card-extra {
+    margin-bottom: 30px;
+    border-radius: 24px;
+    background-image: url("../../images/giveaway_mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: left center;
+  }
+
+  .home__card-body {
+    width: 100%;
+  }
+
+  .home__card-body > h2 {
+    font-size: 21px;
+  }
+
+  .home__card-body > p {
+    font-size: 12px;
+  }
+
+  .home__card-btn {
+    width: 100%;
+  }
+
+  .home__card-cta {
+    font-size: 14px !important;
+  }
+
+  .home__card-image-container {
+    display: none;
+  }
+
+  .info-box > div {
+    font-size: 14px;
+    height: 150px;
+    width: 130px;
+  }
+
+  .home__options > h1 {
+    font-size: 22px !important;
+  }
+
+  .home__select {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .pool {
+    display: block;
+  }
+
+  .home__data {
+    display: block;
+  }
+}
